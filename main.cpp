@@ -30,7 +30,8 @@ using namespace std;
 
 #include "functions.hpp"
 
-int main() {
+int main()
+{
 	cout << "Hello World!" << endl;
 
 	int i = 0;
