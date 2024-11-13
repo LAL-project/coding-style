@@ -84,6 +84,7 @@ int main()
 			p2 += 4;
 		}
 		while (p1 < p2);
+
 		return p1 + p1;
 	}(3, 100);
 
@@ -91,12 +92,21 @@ int main()
 
 	std::vector<int> asdf{1, 2, 3, 4, 5, 6, 7, 8};
 	for (int v : asdf) {
-		std::cout << "--------------------------"
-				  << "This is a super long std::cout message to display values " << v
-				  << '\n'
-				  << "This message continues even after the first value has been "
-					 "displayed: "
-				  << v * v << '\n';
+		std::cout
+			<< "--------------------------"
+			<< "This is a super long std::cout message to display values " << v
+			<< '\n'
+			<< "This message continues even after the first value has been "
+			   "displayed: "
+			<< v * v << '\n';
+
+		std::cout
+			<< "--------------------------"
+			<< "This is a super long std::cout message to display values!! "
+			<< v << '\n'
+			<< "This message continues even after the first value has been "
+			   "displayed: "
+			<< v * v << '\n';
 	}
 
 	{

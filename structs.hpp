@@ -26,6 +26,9 @@
 
 #pragma once
 
+// C++ includes
+#include <string>
+
 struct empty_struct { };
 
 struct foo {
@@ -125,10 +128,27 @@ private:
 	};
 };
 
-template <typename t1, typename t2, typename t3> struct templated_struct {
-public:
-
-protected:
-
-private:
+struct S1 {
+	int a;
+	float b;
+	std::string s;
 };
+
+S1 return_struct_1() noexcept
+{
+	return S1{.a = 2, .b = 4.0, .s = "asdf"};
+}
+
+struct S2 {
+	int aaaaaaaaaaaaaaaaaaaaaa;
+	float bbbbbbbbbbbbbbbbbbbbbbbb;
+	std::string ssssssssssssssssssssss;
+};
+
+S2 return_struct_2() noexcept
+{
+	return S2{
+		.aaaaaaaaaaaaaaaaaaaaaa = 2,
+		.bbbbbbbbbbbbbbbbbbbbbbbb = 4.0,
+		.ssssssssssssssssssssss = "asdf"};
+}

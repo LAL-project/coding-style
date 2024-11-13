@@ -26,112 +26,34 @@
 
 #pragma once
 
-class empty_class { };
-
-class foo {
+template <typename t1> class templated_class_1 {
 public:
-
-	foo() noexcept
-		: m_j(0),
-		  m_i(9)
-	{ }
-
-	foo& operator++ () noexcept
-	{
-		++m_j;
-		return *this;
-	}
-
-	int operator[] ([[maybe_unused]] const int k) const noexcept
-	{
-		return m_i;
-	}
-
-	class nested_class_2 {
-	public:
-
-	protected:
-
-	private:
-	};
 
 protected:
 
-	/// Documentation of member @e m_j
-	int m_j;
-	/* comment */
-
-	class nested_class_1 {
-	public:
-
-	protected:
-
-	private:
-	};
-
 private:
-
-	/// Documentation of member @e m_i
-	int m_i;
-
-	class nested_class_3 {
-	public:
-
-	protected:
-
-	private:
-	};
-
-	[[nodiscard]] static inline constexpr int function_with_a_long_name() noexcept
-	{
-		return 1;
-	}
 };
 
-class foo_2 {
+template <typename t1, class t2> class templated_class_2 {
 public:
-
-	foo_2(
-		int param1,
-		int param2,
-		[[maybe_unused]] int param3,
-		[[maybe_unused]] int param4) noexcept
-		: m_j(param1),
-		  m_i(param2)
-	{ }
-
-	class nested_class_2 {
-	public:
-
-	protected:
-
-	private:
-	};
 
 protected:
 
-	/// Documentation of member @e m_j
-	int m_j;
-	/* comment */
+private:
+};
 
-	class nested_class_1 {
-	public:
+template <typename t1, class t2, typename t3> class templated_class_3 {
+public:
 
-	protected:
-
-	private:
-	};
+protected:
 
 private:
+};
 
-	/// Documentation of member @e m_i
-	int m_i;
+class A {
+public:
+};
 
-	class nested_class_3 {
-	public:
-
-	protected:
-
-	private:
-	};
+class B : public A {
+public:
 };

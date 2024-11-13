@@ -1,5 +1,5 @@
 TEMPLATE = app
-CONFIG += console c++17
+CONFIG += console c++20
 CONFIG -= app_bundle
 CONFIG -= qt
 
@@ -10,6 +10,8 @@ DISTFILES += .clang-format
 
 HEADERS += \
 	classes.hpp \
+	classes_templated.hpp \
 	enums.hpp \
 	functions.hpp \
-	structs.hpp
+	structs.hpp \
+	structs_templated.hpp
