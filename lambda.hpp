@@ -26,31 +26,44 @@
 
 #pragma once
 
-enum empty_enum {
-};
+#include <iostream>
 
-enum list_of_soft_types {
-	a,
-	b,
-	c,
-	d,
-	e,
-	f
-};
+void do_something(int i) noexcept
+{
+	[[maybe_unused]] const auto l0 = [](int p1, int p2) -> int
+	{
+		return p1 + p2;
+	};
 
-enum asdf {
-	g,
-	h,
-	i,
-	j,
-	k
-};
+	const auto l1 = [](int p1, int p2) -> int
+	{
+		return p1 + p2;
+	};
+	std::cout << l1(1, 1) << '\n';
 
-enum class list_of_types : int {
-	asdf,
-	b,
-	ccccccccc,
-	d,
-	e,
-	f
-};
+	[[maybe_unused]] const auto l2 = [&](int p1, int p2) -> int
+	{
+		while (p1 < p2) {
+			p1 += i;
+			p2 += 4;
+		}
+		return p1 + p1;
+	};
+
+	[[maybe_unused]] const auto l3 = [&](int p1, int p2) -> int
+	{
+		do {
+			p1 += i;
+			p2 += 4;
+		}
+		while (p1 < p2);
+
+		return p1 + p1;
+	}(3, 100);
+
+	[[maybe_unused]] const auto l44444444444444444444444444444444444444444444 =
+		l2(3, 100);
+
+	[[maybe_unused]] const auto
+		l4444444444444444444444444444444444444444444455555555555 = l2(3, 100);
+}

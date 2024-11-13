@@ -28,67 +28,8 @@
 #include <vector>
 using namespace std;
 
-#include "functions.hpp"
-
 int main()
 {
-	cout << "Hello World!" << endl;
-
-	int i = 0;
-	const int r = function_with_a_long_name();
-	switch (r) {
-	case 1: {
-		i += 3;
-		break;
-	}
-	case 2: {
-		i += 4;
-		break;
-	}
-	default:
-		i += 19;
-	}
-
-	std::cout << i << '\n';
-
-	if (i == 9) {
-		std::cout << "hey!\n";
-	}
-	else if (i == 10) {
-		std::cout << "asdf\n";
-	}
-
-	[[maybe_unused]] const auto l0 = [](int p1, int p2) -> int
-	{
-		return p1 + p2;
-	};
-
-	const auto l1 = [](int p1, int p2) -> int
-	{
-		return p1 + p2;
-	};
-	std::cout << l1(1, 1) << '\n';
-	[[maybe_unused]] const auto l2 = [&](int p1, int p2) -> int
-	{
-		while (p1 < p2) {
-			p1 += i;
-			p2 += 4;
-		}
-		return p1 + p1;
-	};
-
-	[[maybe_unused]] const auto l3 = [&](int p1, int p2) -> int
-	{
-		do {
-			p1 += i;
-			p2 += 4;
-		}
-		while (p1 < p2);
-
-		return p1 + p1;
-	}(3, 100);
-
-	[[maybe_unused]] const auto l4 = l2(3, 100);
 
 	std::vector<int> asdf{1, 2, 3, 4, 5, 6, 7, 8};
 	for (int v : asdf) {

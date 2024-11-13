@@ -14,5 +14,8 @@ HEADERS += \
 	enums.hpp \
 	functions.hpp \
 	functions_templated.hpp \
+	if.hpp \
+	lambda.hpp \
 	structs.hpp \
-	structs_templated.hpp
+	structs_templated.hpp \
+	switch.hpp

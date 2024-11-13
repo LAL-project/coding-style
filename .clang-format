@@ -25,8 +25,9 @@
 Language: Cpp
 
 # TODO:
-# Trailing 'const' for member functions on a new line.
-# Trailing 'noexcept' on a new line.
+# - Trailing 'const' for member functions on a new line.
+# - Trailing 'noexcept' of functions (free or otherwise) on a new line.
+# - Trailing '}' on brace-inicializer list for structs on a new line.
 
 # File style
 
@@ -101,11 +102,20 @@ BraceWrapping:
   BeforeLambdaBody: true
   BeforeWhile: true
 
-# If, while, for, enum, switch
+# If, while, for, enum
 
 AllowShortIfStatementsOnASingleLine: WithoutElse
 AllowShortEnumsOnASingleLine: false
 AllowShortLoopsOnASingleLine: false
+
+# Switch
+
+AllowShortCaseLabelsOnASingleLine: true
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+  AlignCaseColons: false
 
 # Template declarations
 

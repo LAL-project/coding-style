@@ -26,31 +26,26 @@
 
 #pragma once
 
-enum empty_enum {
-};
+// C++ includes
+#include <iostream>
 
-enum list_of_soft_types {
-	a,
-	b,
-	c,
-	d,
-	e,
-	f
-};
-
-enum asdf {
-	g,
-	h,
-	i,
-	j,
-	k
-};
-
-enum class list_of_types : int {
-	asdf,
-	b,
-	ccccccccc,
-	d,
-	e,
-	f
-};
+void do_something(int i) noexcept
+{
+	if (i == 9) {
+		std::cout << "hey!\n";
+	}
+	else if (i == 10) {
+		std::cout << "10.llasdf\n";
+	}
+	else if (i == 20) {
+		if (i <= 400) {
+			std::cout << "at most 400\n";
+		}
+		else {
+			std::cout << "more than 400\n";
+		}
+	}
+	else {
+		std::cout << "???\n";
+	}
+}
