@@ -32,7 +32,7 @@ Language: Cpp
 
 SortIncludes: Never
 InsertNewlineAtEOF: true
-ColumnLimit: 85
+ColumnLimit: 80
 ReflowComments: false
 UseTab: Always
 IndentWidth: 4
