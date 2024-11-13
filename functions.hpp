@@ -27,11 +27,9 @@
 #pragma once
 
 // C++ includes
-#include <limits>
 #include <string>
-#include <type_traits>
 
-// asdf includes
+// other includes
 #include <sstream>
 #include <vector>
 
@@ -145,26 +143,4 @@ void function_with_pointer([[maybe_unused]] float *f) noexcept
 			bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb,
 			ccccccccccccccccccccccccccccccccccccccccccccccccc,
 			ddddddddddddddddddddddddddddddddddddddddddddddddd);
-}
-
-template <typename t1>
-t1 templated_function_1() noexcept
-{
-	return std::numeric_limits<t1>::max();
-}
-
-template <typename t1, typename t2>
-using res = std::conditional_t<std::is_integral_v<t1>, t2, t1>;
-
-template <typename t1, typename t2>
-res<t1, t2> templated_function_2() noexcept
-{
-	return std::numeric_limits<t1>::max();
-}
-
-template <typename t1, typename t2>
-std::conditional_t<std::is_integral_v<t1>, t2, t1>
-templated_function_3() noexcept
-{
-	return std::numeric_limits<t1>::max();
 }

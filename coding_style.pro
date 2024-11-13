@@ -13,5 +13,6 @@ HEADERS += \
 	classes_templated.hpp \
 	enums.hpp \
 	functions.hpp \
+	functions_templated.hpp \
 	structs.hpp \
 	structs_templated.hpp
