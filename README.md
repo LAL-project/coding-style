@@ -1,6 +1,6 @@
 # Specification of the style to be followed in LAL
 
-This repository is used to define the coding style of the [Linear Arrangement Library](https://github.com/LAL-project/linear-arrangement-library). This is defined via the well-known [clang-format](https://releases.llvm.org/18.1.0/tools/clang/docs/ClangFormatStyleOptions.html) styling tool, whose exact options and their values can be found in the [.clang-format](https://github.com/LAL-project/coding-style/blob/main/.clang-format) file.
+This repository is used to define the coding style of the [Linear Arrangement Library](https://github.com/LAL-project/linear-arrangement-library). This is defined via the well-known [clang-format](https://releases.llvm.org/18.1.0/tools/clang/docs/ClangFormatStyleOptions.html) styling tool, whose exact options and their values can be found in the [.clang-format](https://github.com/LAL-project/coding-style/blob/main/.clang-format) file. We use the options up to version `18.1`.
 
 Other specifications not present in that file are listed below. In what follows, consider 'class' and 'struct' to be synonyms.
 
