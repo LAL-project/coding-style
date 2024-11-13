@@ -48,7 +48,8 @@
  * @brief function_with_a_long_name
  * @return
  */
-[[nodiscard]] static inline constexpr int function_with_a_super_long_name() noexcept
+[[nodiscard]] static inline constexpr int
+function_with_a_super_long_name() noexcept
 {
 	return 1;
 }
@@ -87,7 +88,8 @@ function_short_name(int a, int b, int c, int d) noexcept
  * @brief function_with_a_super_long_name
  * @return
  */
-[[nodiscard]] float function_with_a_super_long_name_and_lots_of_params_aaaaaaaab(
+[[nodiscard]] float
+function_with_a_super_long_name_and_lots_of_params_aaaaaaaab(
 	[[maybe_unused]] int a,
 	[[maybe_unused]] int b,
 	[[maybe_unused]] int c,
@@ -119,7 +121,8 @@ void function_with_pointer([[maybe_unused]] float *f) noexcept
 	const int c = 3;
 	const int d = 4;
 	[[maybe_unused]] const int res1 =
-		function_with_a_super_long_name_and_lots_of_params_aaaaaaaab(a, b, c, d);
+		function_with_a_super_long_name_and_lots_of_params_aaaaaaaab(
+			a, b, c, d);
 
 	const int aaaaaaaaaaaaaaaaa = 1;
 	const int bbbbbbbbbbbbbbbbb = 2;
@@ -158,7 +161,8 @@ template <typename t1, typename t2> res<t1, t2> templated_function_2() noexcept
 }
 
 template <typename t1, typename t2>
-std::conditional_t<std::is_integral_v<t1>, t2, t1> templated_function_3() noexcept
+std::conditional_t<std::is_integral_v<t1>, t2, t1>
+templated_function_3() noexcept
 {
 	return std::numeric_limits<t1>::max();
 }

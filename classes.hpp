@@ -82,7 +82,8 @@ private:
 	private:
 	};
 
-	[[nodiscard]] static inline constexpr int function_with_a_long_name() noexcept
+	[[nodiscard]] static inline constexpr int
+	function_with_a_long_name() noexcept
 	{
 		return 1;
 	}
