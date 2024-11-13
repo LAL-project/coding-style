@@ -26,7 +26,8 @@
 
 #pragma once
 
-template <typename t1, typename t2, typename t3> struct templated_struct {
+template <typename t1, typename t2, typename t3>
+struct templated_struct {
 public:
 
 protected:

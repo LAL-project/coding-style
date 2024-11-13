@@ -147,7 +147,8 @@ void function_with_pointer([[maybe_unused]] float *f) noexcept
 			ddddddddddddddddddddddddddddddddddddddddddddddddd);
 }
 
-template <typename t1> t1 templated_function_1() noexcept
+template <typename t1>
+t1 templated_function_1() noexcept
 {
 	return std::numeric_limits<t1>::max();
 }
@@ -155,7 +156,8 @@ template <typename t1> t1 templated_function_1() noexcept
 template <typename t1, typename t2>
 using res = std::conditional_t<std::is_integral_v<t1>, t2, t1>;
 
-template <typename t1, typename t2> res<t1, t2> templated_function_2() noexcept
+template <typename t1, typename t2>
+res<t1, t2> templated_function_2() noexcept
 {
 	return std::numeric_limits<t1>::max();
 }

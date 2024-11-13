@@ -26,7 +26,8 @@
 
 #pragma once
 
-template <typename t1> class templated_class_1 {
+template <typename t1>
+class templated_class_1 {
 public:
 
 protected:
@@ -34,7 +35,8 @@ protected:
 private:
 };
 
-template <typename t1, class t2> class templated_class_2 {
+template <typename t1, class t2>
+class templated_class_2 {
 public:
 
 protected:
@@ -42,7 +44,8 @@ protected:
 private:
 };
 
-template <typename t1, class t2, typename t3> class templated_class_3 {
+template <typename t1, class t2, typename t3>
+class templated_class_3 {
 public:
 
 protected:

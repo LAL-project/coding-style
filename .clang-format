@@ -109,7 +109,7 @@ AllowShortLoopsOnASingleLine: false
 
 # Template declarations
 
-#BreakTemplateDeclarations: Yes # v19
+AlwaysBreakTemplateDeclarations: Yes
 
 # Lambdas
 
