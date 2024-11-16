@@ -53,6 +53,9 @@ SpaceBeforeParensOptions:
   AfterFunctionDeclarationName: false
   AfterOverloadedOperator: true
   AfterPlacementOperator: true
+SeparateDefinitionBlocks: Leave
+SpaceAfterTemplateKeyword: true
+SpacesInAngles: Never
 
 # Classes/Structs
 
