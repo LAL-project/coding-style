@@ -30,7 +30,19 @@ template <typename t1, typename t2, typename t3>
 struct templated_struct {
 public:
 
+	templated_struct(const templated_struct& f) noexcept = default;
+	templated_struct(templated_struct&& f) noexcept = default;
+
+	templated_struct& operator= (const templated_struct& f) noexcept = default;
+	templated_struct& operator= (templated_struct&& f) noexcept = delete;
+
+	~templated_struct() noexcept = default;
+
 protected:
+
+	template <typename T>
+	void do_something([[maybe_unused]] const T& t) noexcept
+	{ }
 
 private:
 };

@@ -32,6 +32,10 @@ public:
 
 protected:
 
+	template <typename T>
+	void do_something([[maybe_unused]] const T& t) noexcept
+	{ }
+
 private:
 };
 

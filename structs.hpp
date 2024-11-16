@@ -39,6 +39,14 @@ public:
 		  m_i(9)
 	{ }
 
+	foo(const foo& f) noexcept = default;
+	foo(foo&& f) noexcept = default;
+
+	foo& operator= (const foo& f) noexcept = default;
+	foo& operator= (foo&& f) noexcept = delete;
+
+	~foo() noexcept = default;
+
 	struct nested_struct_2 {
 	public:
 
@@ -48,6 +56,10 @@ public:
 	};
 
 protected:
+
+	template <typename T>
+	void do_something([[maybe_unused]] const T& t) noexcept
+	{ }
 
 	/// Documentation of member @e m_j
 	int m_j;
