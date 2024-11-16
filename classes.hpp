@@ -26,6 +26,9 @@
 
 #pragma once
 
+// C++ includes
+#include <iostream>
+
 class empty_class { };
 
 class foo {
@@ -111,7 +114,9 @@ public:
 		[[maybe_unused]] int param4) noexcept
 		: m_j(param1),
 		  m_i(param2)
-	{ }
+	{
+		std::cout << m_i << '\n';
+	}
 
 	class nested_class_2 {
 	public:
