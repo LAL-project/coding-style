@@ -50,6 +50,7 @@ int main()
 			<< v * v << '\n';
 	}
 
+	std::cout << "Code outside a block\n";
 	{
 		// this is code inside a scoped-block
 		int x;
