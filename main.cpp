@@ -30,7 +30,6 @@ using namespace std;
 
 int main()
 {
-
 	std::vector<int> asdf{1, 2, 3, 4, 5, 6, 7, 8};
 	for (int v : asdf) {
 		std::cout
@@ -47,7 +46,7 @@ int main()
 			<< v << '\n'
 			<< "This message continues even after the first value has been "
 			   "displayed: "
-			<< v * v << '\n';
+			<< v * (v + 3) << '\n';
 	}
 
 	std::cout << "Code outside a block\n";
@@ -55,5 +54,9 @@ int main()
 		// this is code inside a scoped-block
 		int x;
 		std::cin >> x;
+	}
+
+	[[maybe_unused]] const int k = (3 + 4) * (5 - 3);
+	if (k + 3 == 5 and (3 * 5 * 6 == 15 || k % 2 == 0)) {
 	}
 }
