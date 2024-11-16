@@ -87,7 +87,7 @@ private:
 	};
 
 	[[nodiscard]] static inline constexpr int
-	function_with_a_long_name() noexcept
+	function_with_a_long_name() const noexcept
 	{
 		return 1;
 	}
