@@ -93,10 +93,10 @@ InsertBraces: true
 BreakBeforeBraces: Custom
 BraceWrapping:
   AfterEnum: false
-  SplitEmptyRecord: false
   AfterStruct: false
   AfterFunction: true
   AfterNamespace: false
+  SplitEmptyRecord: false
   SplitEmptyFunction: false
   BeforeElse: true
   BeforeLambdaBody: true
