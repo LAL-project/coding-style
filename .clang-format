@@ -25,9 +25,15 @@
 Language: Cpp
 
 # TODO:
-# - Trailing 'const' for member functions on a new line.
-# - Trailing 'noexcept' of functions (free or otherwise) on a new line.
-# - Trailing '}' on brace-inicializer list for structs on a new line.
+# - Trailing 'const' for member functions on a new line if it does not fit.
+#	Align at the left.
+# - Trailing 'noexcept' of functions (free or otherwise) on a new line if it
+#   does not fit. Align at the left.
+# - Trailing '}' on brace-initializer list for classes/structs always on a new
+#   line.
+# - Do not indent anonymous scope blocks.
+# - Spaces between binary operators '+' and '-'.
+# - Remove spaces between binary operators '*', '/' and '%'.
 
 # File style
 
