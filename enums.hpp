@@ -30,11 +30,15 @@ enum empty_enum {
 };
 
 enum list_of_soft_types {
+	/// Doc 1
 	a,
+	/// Doc 2
 	b,
+	/// Doc 3
 	c,
 	d,
 	e,
+	/// Doc 4
 	f
 };
 
@@ -42,6 +46,7 @@ enum asdf {
 	g,
 	h,
 	i,
+	/// Only doc
 	j,
 	k
 };
@@ -49,6 +54,7 @@ enum asdf {
 enum class list_of_types : int {
 	asdf,
 	b,
+	/// Only doc
 	ccccccccc,
 	d,
 	e,
