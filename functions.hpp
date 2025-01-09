@@ -70,7 +70,8 @@ function_short_name(int a, int b, int c, int d) noexcept
 	[[maybe_unused]] int a,
 	[[maybe_unused]] int b,
 	[[maybe_unused]] int c,
-	[[maybe_unused]] int d) noexcept;
+	[[maybe_unused]] int d
+) noexcept;
 
 /**
  * @brief function_with_a_super_long_name
@@ -80,7 +81,8 @@ function_short_name(int a, int b, int c, int d) noexcept
 	[[maybe_unused]] int a,
 	[[maybe_unused]] int b,
 	[[maybe_unused]] int c,
-	[[maybe_unused]] int d) noexcept;
+	[[maybe_unused]] int d
+) noexcept;
 
 /**
  * @brief function_with_a_super_long_name
@@ -91,14 +93,16 @@ function_with_a_super_long_name_and_lots_of_params_aaaaaaaab(
 	[[maybe_unused]] int a,
 	[[maybe_unused]] int b,
 	[[maybe_unused]] int c,
-	[[maybe_unused]] int d) noexcept;
+	[[maybe_unused]] int d
+) noexcept;
 
 [[nodiscard]] float
 function_with_an_ever_longer_name_that_does_not_fit_in_s_single_column_of_80_characters(
 	[[maybe_unused]] int a,
 	[[maybe_unused]] int b,
 	[[maybe_unused]] int c,
-	[[maybe_unused]] int d) noexcept;
+	[[maybe_unused]] int d
+) noexcept;
 
 std::string function_with_const(const std::string s) noexcept;
 void function_with_const_ampersand(const std::string& s) noexcept;
@@ -120,7 +124,8 @@ void function_with_pointer([[maybe_unused]] float *f) noexcept
 	const int d = 4;
 	[[maybe_unused]] const int res1 =
 		function_with_a_super_long_name_and_lots_of_params_aaaaaaaab(
-			a, b, c, d);
+			a, b, c, d
+		);
 
 	const int aaaaaaaaaaaaaaaaa = 1;
 	const int bbbbbbbbbbbbbbbbb = 2;
@@ -131,7 +136,8 @@ void function_with_pointer([[maybe_unused]] float *f) noexcept
 			aaaaaaaaaaaaaaaaa,
 			bbbbbbbbbbbbbbbbb,
 			ccccccccccccccccc,
-			ddddddddddddddddd);
+			ddddddddddddddddd
+		);
 
 	const int aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa = 1;
 	const int bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb = 1;
@@ -142,5 +148,6 @@ void function_with_pointer([[maybe_unused]] float *f) noexcept
 			aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,
 			bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb,
 			ccccccccccccccccccccccccccccccccccccccccccccccccc,
-			ddddddddddddddddddddddddddddddddddddddddddddddddd);
+			ddddddddddddddddddddddddddddddddddddddddddddddddd
+		);
 }

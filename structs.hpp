@@ -100,7 +100,8 @@ public:
 		int param1,
 		int param2,
 		[[maybe_unused]] int param3,
-		[[maybe_unused]] int param4) noexcept
+		[[maybe_unused]] int param4
+	) noexcept
 		: m_j(param1),
 		  m_i(param2)
 	{ }
@@ -163,5 +164,6 @@ S2 return_struct_2() noexcept
 	return S2{
 		.aaaaaaaaaaaaaaaaaaaaaa = 2,
 		.bbbbbbbbbbbbbbbbbbbbbbbb = 4.0,
-		.ssssssssssssssssssssss = "asdf"};
+		.ssssssssssssssssssssss = "asdf"
+	};
 }
