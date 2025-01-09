@@ -26,6 +26,8 @@
 
 #pragma once
 
+#include <iostream>
+
 template <typename t1>
 class templated_class_1 {
 public:
@@ -42,6 +44,28 @@ private:
 template <typename t1, class t2>
 class templated_class_2 {
 public:
+
+	int m_i, m_j;
+
+	templated_class_2(
+		int param1,
+		int param2,
+		[[maybe_unused]] int param3,
+		[[maybe_unused]] int param4) noexcept
+		: m_j(param1),
+		  m_i(param2)
+	{
+		std::cout << m_i << '\n';
+	}
+
+	void do_something(
+		int param1,
+		int param2,
+		[[maybe_unused]] int param3,
+		[[maybe_unused]] int param4) const noexcept
+	{
+		std::cout << param1 + param2 * m_i << '\n';
+	}
 
 protected:
 

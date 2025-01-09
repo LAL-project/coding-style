@@ -118,6 +118,15 @@ public:
 		std::cout << m_i << '\n';
 	}
 
+	void do_something(
+		int param1,
+		int param2,
+		[[maybe_unused]] int param3,
+		[[maybe_unused]] int param4) const noexcept
+	{
+		std::cout << param1 + param2 * m_i << '\n';
+	}
+
 	class nested_class_2 {
 	public:
 
