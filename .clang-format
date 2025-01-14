@@ -39,8 +39,9 @@ UseTab: Always
 IndentWidth: 4
 TabWidth: 4
 
-# Spaces and empty lines
+# Spaces, new and empty lines
 
+AlignEscapedNewlines: Right
 SpaceBeforeAssignmentOperators: true
 #RemoveEmptyLinesInUnwrappedLines: true # v20
 SpaceBeforeSquareBrackets: false
