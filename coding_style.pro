@@ -11,6 +11,7 @@ DISTFILES += .clang-format
 HEADERS += \
 	classes.hpp \
 	classes_templated.hpp \
+	defines_macros.hpp \
 	enums.hpp \
 	functions.hpp \
 	functions_templated.hpp \
