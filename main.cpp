@@ -30,7 +30,10 @@ using namespace std;
 
 int main()
 {
-	[[maybe_unused]] constexpr static int VV = 1234;
+	static constexpr int VV = 1234;
+	if (VV == 1235) {
+		std::cout << "WRONG!\n";
+	}
 
 	std::vector<int> asdf{1, 2, 3, 4, 5, 6, 7, 8};
 	for (int v : asdf) {

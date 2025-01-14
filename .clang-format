@@ -79,7 +79,7 @@ ReferenceAlignment: Left
 SpaceAroundPointerQualifiers: Before
 
 QualifierAlignment: Custom
-QualifierOrder: [constexpr, static, inline, const, friend, type]
+QualifierOrder: [static, constexpr, inline, const, friend, type]
 
 BreakAfterAttributes: Never
 
