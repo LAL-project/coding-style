@@ -86,8 +86,8 @@ private:
 	private:
 	};
 
-	[[nodiscard]] static inline constexpr int
-	function_with_a_long_name() const noexcept
+	[[nodiscard]] inline static constexpr int
+	function_with_a_long_name() noexcept
 	{
 		return 1;
 	}
@@ -157,6 +157,11 @@ struct S2 {
 	int aaaaaaaaaaaaaaaaaaaaaa;
 	float bbbbbbbbbbbbbbbbbbbbbbbb;
 	std::string ssssssssssssssssssssss;
+
+	S2& something() noexcept
+	{
+		return *this;
+	}
 };
 
 S2 return_struct_2() noexcept
@@ -166,4 +171,31 @@ S2 return_struct_2() noexcept
 		.bbbbbbbbbbbbbbbbbbbbbbbb = 4.0,
 		.ssssssssssssssssssssss = "asdf"
 	};
+}
+
+void do_something() noexcept
+{
+	S2 s1;
+	s1.something().something().something().something();
+	s1.something().something().something().something().something();
+	s1.something().something().something().something().something().something();
+	s1.something()
+		.something()
+		.something()
+		.something()
+		.something()
+		.something()
+		.something();
+
+	auto s2 = return_struct_2();
+	s2.something().something().something().something();
+	s2.something().something().something().something().something();
+	s2.something().something().something().something().something().something();
+	s2.something()
+		.something()
+		.something()
+		.something()
+		.something()
+		.something()
+		.something();
 }
