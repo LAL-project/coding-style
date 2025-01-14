@@ -51,3 +51,43 @@ templated_function_3() noexcept
 {
 	return std::numeric_limits<t1>::max();
 }
+
+template <auto Callable>
+decltype(Callable()) call_the_callable(
+	[[maybe_unused]] int a,
+	[[maybe_unused]] int b,
+	[[maybe_unused]] int c,
+	[[maybe_unused]] int d,
+	[[maybe_unused]] int e,
+	[[maybe_unused]] int f,
+	[[maybe_unused]] int g,
+	[[maybe_unused]] int h,
+	[[maybe_unused]] int i,
+	[[maybe_unused]] int j,
+	[[maybe_unused]] int k
+) noexcept
+{
+	const auto res = Callable();
+	return res;
+}
+
+void call_the_calling_callable() noexcept
+{
+	call_the_callable<
+		[]() -> int
+		{
+			return 42;
+		}>(
+		111111,
+		222222,
+		111111,
+		222222,
+		111111,
+		222222,
+		222222,
+		111111,
+		222222,
+		111111,
+		222222
+	);
+}
