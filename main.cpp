@@ -28,12 +28,32 @@
 #include <vector>
 using namespace std;
 
+// the [[nodiscard]] attribute prevents clang-format (v19.1.7) from ordering the
+// qualifiers 'constexpr' and 'static' properly.
+[[nodiscard]] constexpr static inline int function_with_nodiscard() noexcept
+{
+	return 1;
+}
+// the attributes are ordered according to the specified order in the
+// .clang-format file
+static constexpr inline int function_without_nodiscard() noexcept
+{
+	return 1;
+}
+
 int main()
 {
 	static constexpr int VV = 1234;
 	if (VV == 1235) {
 		std::cout << "WRONG!\n";
 	}
+
+	// the [[maybe_unused]] attribute prevents clang-format (v19.1.7) from
+	// ordering the qualifiers 'constexpr' and 'static' properly.
+	[[maybe_unused]] constexpr static int A = 1234;
+	// the attributes are ordered according to the specified order in the
+	// .clang-format file
+	static constexpr int B = 1234;
 
 	std::vector<int> asdf{1, 2, 3, 4, 5, 6, 7, 8};
 	for (int v : asdf) {
