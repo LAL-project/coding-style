@@ -36,6 +36,12 @@ t1 templated_function_1() noexcept
 	return std::numeric_limits<t1>::max();
 }
 
+template <typename t1__________________, typename t2>
+using res2 = std::conditional_t<
+	std::is_integral_v<t1__________________>,
+	t2,
+	t1__________________>;
+
 template <typename t1, typename t2>
 using res = std::conditional_t<std::is_integral_v<t1>, t2, t1>;
 

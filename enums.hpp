@@ -60,3 +60,13 @@ enum class list_of_types : int {
 	e,
 	f
 };
+
+enum class another_enum {
+	asdf,
+	b,
+	/// Only doc
+	ccccccccc,
+	d,
+	e,
+	f
+};

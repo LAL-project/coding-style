@@ -26,6 +26,8 @@
 
 #pragma once
 
+#include <iostream>
+
 template <typename t1, typename t2, typename t3>
 struct templated_struct {
 public:
@@ -42,7 +44,9 @@ protected:
 
 	template <typename T>
 	void do_something([[maybe_unused]] const T& t) noexcept
-	{ }
+	{
+		std::cout << "Hey\n";
+	}
 
 private:
 };

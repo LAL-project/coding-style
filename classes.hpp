@@ -53,9 +53,9 @@ public:
 		return *this;
 	}
 
-	int operator[] ([[maybe_unused]] const int k) const noexcept
+	[[nodiscard]] int operator[] ([[maybe_unused]] const int k) const noexcept
 	{
-		return m_i;
+		return m_i * k;
 	}
 
 	class nested_class_2 {
